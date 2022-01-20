@@ -11,12 +11,24 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
-    static: path.resolve(__dirname, 'public')
+    static: path.resolve(__dirname, 'public'),
+    historyApiFallback: true
   },
   module: {
     rules: [
-      {test: /\.js$/, exclude: /node_modules/, use: ['babel-loader']},
-      {test: /(\.css)$/, use: ['style-loader', 'css-loader']}
+      { test: /\.js$/, exclude: /node_modules/, use: ['babel-loader'] },
+      { test: /(\.css)$/, use: ['style-loader', 'css-loader'] },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+      },
     ]
   },
   plugins: [

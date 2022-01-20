@@ -1,9 +1,9 @@
 import React from "react";
 
 
-const OtherComp = () => {
+const Polls = () => {
     return (
         <div className="">Loading...</div>
     )
 }
-export default OtherComp
+export default Polls
