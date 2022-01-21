@@ -8,7 +8,7 @@ const Home = () => {
     const code = params.get('code');
 
     useEffect(() => {
-        axios.get('http://localhost:5000/token')
+        axios.get('http://localhost:8000/token')
             .then((res) => {
                 if (res.data != "") {
                     setLoading(false);
@@ -28,7 +28,7 @@ const Home = () => {
                             });
                     } else {
                         window.history.pushState({}, document.title, '/');
-                        axios.post('http://localhost:5000/code', {}, {
+                        axios.post('http://localhost:8000/code', {}, {
                             headers: {
                                 'code': code
                             }

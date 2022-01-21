@@ -80,7 +80,8 @@ def get_creator_goals():
     response = requests.request("GET", url, headers=headers, data={})
 
     return response.text
+    return "GASDFSD"
 
 
 if __name__ == "__main__":
-    api.run(debug=True)
+    api.run(host="localhost", port=8000, debug=True)
