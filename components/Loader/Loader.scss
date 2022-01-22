@@ -1,0 +1,44 @@
+@import "../vars";
+
+.loader {
+  text-align: center;
+  margin-top: 10%;
+
+  svg {
+    font-size: 64px;
+    animation-name: spin;
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  p {
+    color: $light;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 10px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    color: $light;
+  }
+  25% {
+    transform: rotate(90deg);
+    color: $teal;
+  }
+  50% {
+    transform: rotate(180deg);
+    color: $grey;
+  }
+  75% {
+    transform: rotate(270deg);
+    color: $teal;
+  }
+  100% {
+    transform: rotate(360deg);
+    color: $light;
+  }
+}

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import Loader from '../Loader/index';
+
+import './HomePage.scss';
 
 const Home = () => {
     const [isLoading, setLoading] = useState(true);
@@ -10,7 +13,8 @@ const Home = () => {
     useEffect(() => {
         axios.get('http://localhost:8000/token')
             .then((res) => {
-                if (res.data != "") {
+                if (res.data.ok) {
+                    console.log("access token is valid or has been refreshed");
                     setLoading(false);
                 } else {
                     if (!code) {
@@ -34,6 +38,7 @@ const Home = () => {
                             }
                         })
                             .then((res) => {
+                                console.log(res);
                                 setLoading(false);
                             });
                     }
@@ -43,20 +48,20 @@ const Home = () => {
 
     if (isLoading) {
         return (
-            <div className="">Loading...</div>
+            <Loader />
         )
     }
 
     return (
-        <div>
+        <div className="homepage">
             <Link to='/follower-counter'>
                 Follower Counter
             </Link>
-            <Link to='/polls'>
-                Polls
-            </Link>
             <Link to='/game'>
                 Game
+            </Link>
+            <Link to='/polls'>
+                Polls
             </Link>
         </div>
     )

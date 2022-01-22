@@ -1,9 +1,9 @@
 import React from "react";
-
+import Loader from '../Loader/index';
 
 const Polls = () => {
     return (
-        <div className="">Loading...</div>
+        <Loader />
     )
 }
 export default Polls
