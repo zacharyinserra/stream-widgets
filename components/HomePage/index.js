@@ -54,6 +54,9 @@ const Home = () => {
 
     return (
         <div className="homepage">
+            <Link to='/username'>
+                Username
+            </Link>
             <Link to='/follower-counter'>
                 Follower Counter
             </Link>

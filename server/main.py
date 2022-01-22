@@ -81,7 +81,7 @@ def get_game_name():
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
-    return response.text
+    return response.json()
 
 
 def get_validated_access_token():

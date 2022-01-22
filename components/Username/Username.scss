@@ -1,0 +1,20 @@
+@import "../vars";
+
+.username {
+  background-color: $light;
+  border-radius: 10px;
+  width: fit-content;
+
+  h1 {
+    color: $black;
+    font-weight: 600;
+    font-size: 64px;
+    padding: 16px 20px 20px;
+    margin: 0;
+  }
+
+  svg {
+    color: $teal_80;
+    font-size: 60px;
+  }
+}

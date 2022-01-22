@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "../HomePage/index";
+import Username from "../Username/index";
 import FollowerCounter from "../FollowerCounter/index";
 import Polls from "../Polls/index";
 import Game from "../CurrentGame/index";
@@ -11,6 +12,7 @@ const App = () => {
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Home />} />
+                <Route path='/username' element={<Username />} />
                 <Route path='/follower-counter' element={<FollowerCounter />} />
                 <Route path='/polls' element={<Polls />} />
                 <Route path='/game' element={<Game />} />
