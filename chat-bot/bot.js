@@ -1,13 +1,14 @@
-const tmi = require('tmi.js');
+import tmi from 'tmi.js';
+import { botCredentials } from './vars.js';
 
 // Define configuration options
 const opts = {
     identity: {
-        username: process.env.BOT_USERNAME,
-        password: process.env.OAUTH_TOKEN
+        username: botCredentials.bot_username,
+        password: botCredentials.oauth_token
     },
     channels: [
-        process.env.CHANNEL_NAME
+        botCredentials.channel_name
     ]
 };
 
@@ -29,10 +30,8 @@ function onMessageHandler(target, context, msg, self) {
     const commandName = msg.trim();
 
     // If the command is known, let's execute it
-    if (commandName === '!dice') {
-        const num = rollDice();
-        client.say(target, `You rolled a ${num}`);
-        console.log(`* Executed ${commandName} command`);
+    if (commandName === '!bonk') {
+        client.say(target, 'go to horny jail');
     } else {
         console.log(`* Unknown command ${commandName}`);
     }
