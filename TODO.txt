@@ -1,7 +1,0 @@
-BRB screen
-ABOUT22StART screen
-    cool background with lines
-camera border thingy
-    naem on bottom overlaying border
-alerts?
-chat bot
