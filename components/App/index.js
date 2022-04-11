@@ -6,6 +6,7 @@ import Username from "../Username/index";
 import FollowerCounter from "../FollowerCounter/index";
 import Polls from "../Polls/index";
 import Game from "../CurrentGame/index";
+import BeRightBack from "../BeRightBack";
 
 const App = () => {
     return (
@@ -14,8 +15,9 @@ const App = () => {
                 <Route path='/' element={<Home />} />
                 <Route path='/username' element={<Username />} />
                 <Route path='/follower-counter' element={<FollowerCounter />} />
-                <Route path='/polls' element={<Polls />} />
                 <Route path='/game' element={<Game />} />
+                <Route path='/polls' element={<Polls />} />
+                <Route path='/be-right-back' element={<BeRightBack />} />
             </Routes>
         </BrowserRouter>
     )

@@ -66,6 +66,9 @@ const Home = () => {
             <Link to='/polls'>
                 Polls
             </Link>
+            <Link to='/be-right-back'>
+                Be Right Back
+            </Link>
         </div>
     )
 }
